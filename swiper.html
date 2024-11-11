@@ -1,0 +1,78 @@
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper 輪播</title>
+    <style>
+        body {
+            padding-top: 56px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">JS 套件介紹</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="swiper.html">Swiper 輪播</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aos.html">AOS 動畫</a></li>
+                    <li class="nav-item"><a class="nav-link" href="text-to-speech.html">文字轉語音</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <h2>Swiper 輪播範例</h2>
+        <p><a href="https://swiperjs.com/" target="_blank">Swiper 官網</a></p>
+
+        <h3>範例程式碼</h3>
+        <pre><code>
+            &lt;!-- Swiper CSS 和 JS --&gt;
+            &lt;link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"&gt;
+            &lt;script src="https://unpkg.com/swiper/swiper-bundle.min.js"&gt;&lt;/script&gt;
+
+            &lt;!-- 初始化 Swiper --&gt;
+            &lt;script&gt;
+                var swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    slidesPerView: 1,
+                    autoplay: {
+                        delay: 2500,
+                    },
+                });
+            &lt;/script&gt;
+        </code></pre>
+
+        <h3>效果展示</h3>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            slidesPerView: 1,
+            autoplay: {
+                delay: 2500,
+            },
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

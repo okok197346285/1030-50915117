@@ -1,0 +1,42 @@
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottie 動畫效果</title>
+    <style>
+        body {
+            padding-top: 56px;
+        }
+        #lottie-container {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.0/lottie.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">JS 套件介紹</a>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <h2>Lottie 動畫效果</h2>
+        <div id="lottie-container"></div>
+    </div>
+
+    <script>
+        // 加載 Lottie 動畫
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('lottie-container'), // 動畫容器
+            renderer: 'svg', // 使用 SVG 渲染
+            loop: true, // 循環播放
+            autoplay: true, // 自動播放
+            path: 'https://assets10.lottiefiles.com/packages/lf20_QrrHfh.json' // Lottie JSON 動畫 URL（可以更換為自己的 URL）
+        });
+    </script>
+</body>
+</html>
